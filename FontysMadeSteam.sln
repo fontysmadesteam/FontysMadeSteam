@@ -8,11 +8,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacUI", "MacUI\MacUI.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsUI", "WindowsUI\WindowsUI.csproj", "{5642BF65-1664-40B2-891D-0193B46FFC47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontysMadeSteam.Logic", "FontysMadeSteam.Logic\FontysMadeSteam.Logic.csproj", "{EE93802B-204D-4183-935B-0638E7BAC375}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FontysMadeSteam.Logic", "FontysMadeSteam.Logic\FontysMadeSteam.Logic.csproj", "{EE93802B-204D-4183-935B-0638E7BAC375}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontysMadeSteam.DAL", "FontysMadeSteam.DAL\FontysMadeSteam.DAL.csproj", "{522A1AAA-BE20-4ED9-AA50-E0121742B526}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FontysMadeSteam.DAL", "FontysMadeSteam.DAL\FontysMadeSteam.DAL.csproj", "{522A1AAA-BE20-4ED9-AA50-E0121742B526}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontysMadeSteam.Interfaces", "FontysMadeSteam.Interfaces\FontysMadeSteam.Interfaces.csproj", "{7B17093E-2DB2-4A09-AE5B-39A60B2966A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FontysMadeSteam.Interfaces", "FontysMadeSteam.Interfaces\FontysMadeSteam.Interfaces.csproj", "{7B17093E-2DB2-4A09-AE5B-39A60B2966A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontysMadeSteam_UnitTests", "FontysMadeSteam_UnitTests\FontysMadeSteam_UnitTests.csproj", "{DC5A3571-5272-42DC-AB3A-E6C55D2E1A71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{7B17093E-2DB2-4A09-AE5B-39A60B2966A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B17093E-2DB2-4A09-AE5B-39A60B2966A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B17093E-2DB2-4A09-AE5B-39A60B2966A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5A3571-5272-42DC-AB3A-E6C55D2E1A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5A3571-5272-42DC-AB3A-E6C55D2E1A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5A3571-5272-42DC-AB3A-E6C55D2E1A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5A3571-5272-42DC-AB3A-E6C55D2E1A71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
