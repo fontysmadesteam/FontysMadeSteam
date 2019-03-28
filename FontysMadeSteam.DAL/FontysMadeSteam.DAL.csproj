@@ -10,4 +10,8 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FontysMadeSteam.Interfaces\FontysMadeSteam.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
