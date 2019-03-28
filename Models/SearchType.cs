@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Models
 {
-    class TestClass
+    enum SearchType
     {
-        //hallo?
+        Game,
+        Developer
     }
 }
