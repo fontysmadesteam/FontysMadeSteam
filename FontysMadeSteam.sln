@@ -1,9 +1,12 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{886C7073-F6C7-4D78-A212-97ED77550ED2}"
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{886C7073-F6C7-4D78-A212-97ED77550ED2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacUI", "MacUI\MacUI.csproj", "{AD15BD1A-05D8-4D12-920C-86CE2E1D6657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsUI", "WindowsUI\WindowsUI.csproj", "{5642BF65-1664-40B2-891D-0193B46FFC47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,5 +22,15 @@ Global
 		{AD15BD1A-05D8-4D12-920C-86CE2E1D6657}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD15BD1A-05D8-4D12-920C-86CE2E1D6657}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD15BD1A-05D8-4D12-920C-86CE2E1D6657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5642BF65-1664-40B2-891D-0193B46FFC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5642BF65-1664-40B2-891D-0193B46FFC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5642BF65-1664-40B2-891D-0193B46FFC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5642BF65-1664-40B2-891D-0193B46FFC47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9ACBE2E1-DFDD-42E8-A613-F2A3775C7B91}
 	EndGlobalSection
 EndGlobal
