@@ -104,15 +104,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FontysMadeSteam.Logic\FontysMadeSteam.Logic.csproj">
-      <Project>{195d83a6-49f6-490f-b3c1-43d1a5bdc503}</Project>
-      <Name>FontysMadeSteam.Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FontysMadeSteam.Model\FontysMadeSteam.Model.csproj">
-      <Project>{a49e34c8-2fe1-4f49-a004-d91df56d3fb1}</Project>
-      <Name>FontysMadeSteam.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
