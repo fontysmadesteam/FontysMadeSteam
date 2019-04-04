@@ -34,6 +34,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'egg|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\egg\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -96,12 +106,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FontysMadeSteam.Logic\FontysMadeSteam.Logic.csproj">
-      <Project>{ee93802b-204d-4183-935b-0638e7bac375}</Project>
+      <Project>{195d83a6-49f6-490f-b3c1-43d1a5bdc503}</Project>
       <Name>FontysMadeSteam.Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{886c7073-f6c7-4d78-a212-97ed77550ed2}</Project>
-      <Name>Models</Name>
+    <ProjectReference Include="..\FontysMadeSteam.Model\FontysMadeSteam.Model.csproj">
+      <Project>{a49e34c8-2fe1-4f49-a004-d91df56d3fb1}</Project>
+      <Name>FontysMadeSteam.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

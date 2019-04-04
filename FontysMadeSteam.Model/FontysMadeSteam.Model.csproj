@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;egg</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FontysMadeSteam.Interface\FontysMadeSteam.Interface.csproj" />
-    <ProjectReference Include="..\FontysMadeSteam.Model\FontysMadeSteam.Model.csproj" />
   </ItemGroup>
 
 </Project>

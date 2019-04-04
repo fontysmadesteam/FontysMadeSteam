@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FontysMadeSteam.Interfaces
+namespace FontysMadeSteam.Interface
 {
     public class Class1
     {
