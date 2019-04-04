@@ -1,4 +1,6 @@
-﻿using Models;
+﻿using FontysMadeSteam.DAL.Repository;
+using FontysMadeSteam.Interface;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,12 +9,16 @@ namespace FontysMadeSteam.Logic
 {
     public class GameLogic
     {
-        private List<Game> GetAllGames()
+        public GameRepository GameRepository;
+        public GameLogic()
         {
-            //implementation
-            return null;
+            GameRepository = new GameRepository();
         }
-        private List<Game> Search(string parameter, SearchType type)
+        public List<IGame> GetAllGames()
+        {
+            return GameRepository.GetAllGames();
+        }
+        public List<Game> Search(string parameter, SearchType type)
         {
             //implementation
             return null;

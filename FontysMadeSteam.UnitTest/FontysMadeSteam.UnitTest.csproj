@@ -12,4 +12,11 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FontysMadeSteam.DAL\FontysMadeSteam.DAL.csproj" />
+    <ProjectReference Include="..\FontysMadeSteam.Interface\FontysMadeSteam.Interface.csproj" />
+    <ProjectReference Include="..\FontysMadeSteam.Logic\FontysMadeSteam.Logic.csproj" />
+    <ProjectReference Include="..\FontysMadeSteam.Model\FontysMadeSteam.Model.csproj" />
+  </ItemGroup>
+
 </Project>
