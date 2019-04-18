@@ -1,3 +1,7 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Models;
 ﻿using FontysMadeSteam.DAL.Repository;
 using FontysMadeSteam.Interface;
 using Models;
@@ -9,6 +13,10 @@ namespace FontysMadeSteam.Logic
 {
     public class GameLogic
     {
+        public Game GetGame(int game_id)
+        {
+            throw new NotImplementedException();
+        } 
         public GameRepository GameRepository;
         public GameLogic()
         {
