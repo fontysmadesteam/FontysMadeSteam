@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models
+namespace FontysMadeSteam.Model
 {
     public class Game : IGame
     {

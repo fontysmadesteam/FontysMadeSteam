@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Models;
+using FontysMadeSteam.Model;
 ﻿using FontysMadeSteam.DAL.Repository;
 using FontysMadeSteam.Interface;
-using Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FontysMadeSteam.Logic
 {

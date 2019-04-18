@@ -1,4 +1,4 @@
-﻿using Models;
+﻿using FontysMadeSteam.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

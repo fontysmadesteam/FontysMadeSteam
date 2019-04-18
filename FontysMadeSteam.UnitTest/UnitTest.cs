@@ -3,7 +3,7 @@ using FontysMadeSteam.DAL.Context;
 using FontysMadeSteam.Interface;
 using FontysMadeSteam.Logic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Models;
+using FontysMadeSteam.Model;
 using System.Collections.Generic;
 using System.Linq;
 
