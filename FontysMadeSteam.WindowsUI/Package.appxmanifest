@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="8e733966-b3a9-46bc-9d38-9a3a2b9236e5"
+    Name="503b3056-e90c-4dab-9921-72bff3515482"
     Publisher="CN=kimsi"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="8e733966-b3a9-46bc-9d38-9a3a2b9236e5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="503b3056-e90c-4dab-9921-72bff3515482" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>FontysMadeSteam.WindowsUI</DisplayName>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{517E770C-5197-4B6E-9FDD-0033642FB2A0}</ProjectGuid>
+    <ProjectGuid>{10B7FB07-C1E4-485F-B43F-54E595FB372C}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FontysMadeSteam.WindowsUI</RootNamespace>
@@ -156,6 +156,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FontysMadeSteam.Interface\FontysMadeSteam.Interface.csproj">
+      <Project>{fe2847ff-7cdd-4c15-85d3-a48a57c31de6}</Project>
+      <Name>FontysMadeSteam.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FontysMadeSteam.Logic\FontysMadeSteam.Logic.csproj">
       <Project>{195d83a6-49f6-490f-b3c1-43d1a5bdc503}</Project>
       <Name>FontysMadeSteam.Logic</Name>
