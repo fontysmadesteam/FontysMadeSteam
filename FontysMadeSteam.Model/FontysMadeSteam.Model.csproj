@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FontysMadeSteam.Interface\FontysMadeSteam.Interface.csproj" />
-    <ProjectReference Include="..\FontysMadeSteam.Model\FontysMadeSteam.Model.csproj" />
   </ItemGroup>
 
 </Project>

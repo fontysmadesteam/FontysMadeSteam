@@ -1,11 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <!--<TargetFramework>netstandard2.0</TargetFramework>-->
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+
     <ProjectReference Include="..\Models\Models.csproj" />
+
+    <ProjectReference Include="..\FontysMadeSteam.DAL\FontysMadeSteam.DAL.csproj" />
+    <ProjectReference Include="..\FontysMadeSteam.Model\FontysMadeSteam.Model.csproj" />
+
   </ItemGroup>
 
 </Project>
