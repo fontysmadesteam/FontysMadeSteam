@@ -7,6 +7,7 @@ namespace Models
 {
     public class Game : IGame
     {
+
         public string Name { get; set; }
         public DateTime DatePublished { get; set; }
         public string Description { get; set; }

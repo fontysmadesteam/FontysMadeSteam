@@ -23,5 +23,25 @@ namespace FontysMadeSteam.Logic
             //implementation
             return null;
         }
+        public List<Game> GetGamesFilteredByTag(List<string> listOfTags)
+        {
+            List<Game> filteredListOfGames = new List<Game>();
+            foreach (string tag in listOfTags)
+            {
+                foreach (Game game in GameRepository.GetAllGames())
+                {
+                    foreach (string gameTag in game.Tags)
+                    {
+                        if (gameTag == tag & !filteredListOfGames.Contains(game))
+                        {
+                            filteredListOfGames.Add(game);
+                            break;
+                        }
+                    }
+
+                }
+            }
+            return filteredListOfGames;
+        }
     }
 }
