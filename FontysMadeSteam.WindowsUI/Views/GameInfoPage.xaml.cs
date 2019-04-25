@@ -26,5 +26,10 @@ namespace FontysMadeSteam.WindowsUI.Views
         {
             this.InitializeComponent();
         }
+
+        private void BackToOverviewbtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GameOverviewPage));
+        }
     }
 }

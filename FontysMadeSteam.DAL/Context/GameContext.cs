@@ -12,8 +12,8 @@ namespace FontysMadeSteam.DAL.Context
         #region dummy data 
         public static List<IGame> listOfGames = new List<IGame>()
         {
-            new Game("game1", DateTime.Now, "description1", "downloadlink1", new List<string>(){ "tag1", "tag2" }),
-            new Game("game2", DateTime.Now, "description2", "downloadlink2", new List<string>(){ "tag1", "tag2" })
+            new Game(1,"game1", DateTime.Now, "description1", "downloadlink1", new List<string>(){ "tag1", "tag2" }),
+            new Game(2,"game2", DateTime.Now, "description2", "downloadlink2", new List<string>(){ "tag1", "tag2" })
         };
         #endregion
     }

@@ -20,5 +20,10 @@ namespace FontysMadeSteam.WindowsUI.ViewModels
         {
             Games = new ObservableCollection<IGame>(gameL.GetAllGames());
         }
+
+        public void GoToGameInfo()
+        {
+            
+        }
     }
 }

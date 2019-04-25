@@ -1,4 +1,5 @@
 ﻿using FontysMadeSteam.Logic;
+using FontysMadeSteam.Model;
 using FontysMadeSteam.WindowsUI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,12 @@ namespace FontysMadeSteam.WindowsUI.Views
         {
             ViewModel = new GameViewmodel();
             this.InitializeComponent();
+        }
+
+        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //var game = ((GridView)sender).SelectedItem;
+            this.Frame.Navigate(typeof(GameInfoPage));
         }
     }
 }

@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button x:Name="BackToOverviewbtn" Content="Back to Overview" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,48,0,0" Height="52" Width="155" FontSize="16" Click="BackToOverviewbtn_Click"/>
 
     </Grid>
 </Page>
