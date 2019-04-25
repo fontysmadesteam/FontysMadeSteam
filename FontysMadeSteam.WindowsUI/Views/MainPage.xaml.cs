@@ -1,4 +1,5 @@
 ﻿using FontysMadeSteam.Logic;
+using FontysMadeSteam.WindowsUI.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,7 +24,7 @@ namespace FontysMadeSteam.WindowsUI
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        GameLogic gameL = new GameLogic();
+        public GameViewmodel ViewModel;
         public MainPage()
         {
 

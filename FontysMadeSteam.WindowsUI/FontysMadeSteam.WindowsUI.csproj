@@ -119,7 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="ViewModels\GameViewmodel.cs" />
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,7 +146,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -156,6 +157,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FontysMadeSteam.Interface\FontysMadeSteam.Interface.csproj">
+      <Project>{fe2847ff-7cdd-4c15-85d3-a48a57c31de6}</Project>
+      <Name>FontysMadeSteam.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FontysMadeSteam.Logic\FontysMadeSteam.Logic.csproj">
       <Project>{195d83a6-49f6-490f-b3c1-43d1a5bdc503}</Project>
       <Name>FontysMadeSteam.Logic</Name>

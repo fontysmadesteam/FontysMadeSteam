@@ -14,7 +14,7 @@ namespace FontysMadeSteam.Logic
         {
             GameRepository = new GameRepository();
         }
-        public List<IGame> GetAllGames()
+        public IEnumerable<IGame> GetAllGames()
         {
             return GameRepository.GetAllGames();
         }
@@ -38,7 +38,6 @@ namespace FontysMadeSteam.Logic
                             break;
                         }
                     }
-
                 }
             }
             return filteredListOfGames;
