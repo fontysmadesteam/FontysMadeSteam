@@ -3,11 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models
+namespace FontysMadeSteam.Model
 {
     public class Game : IGame
     {
-
         public string Name { get; set; }
         public DateTime DatePublished { get; set; }
         public string Description { get; set; }
