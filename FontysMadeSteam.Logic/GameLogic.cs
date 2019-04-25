@@ -17,6 +17,10 @@ namespace FontysMadeSteam.Logic
         public IEnumerable<IGame> GetAllGames()
         {
             return GameRepository.GetAllGames();
+            //foreach (var game in Games)
+            //{
+            //    yield return new Game(game.Name, game. game.Description, game.DownloadUrl);
+            //}
         }
         public List<Game> Search(string parameter, SearchType type)
         {

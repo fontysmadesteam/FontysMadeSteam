@@ -1,4 +1,5 @@
-﻿using FontysMadeSteam.Logic;
+﻿using FontysMadeSteam.Interface;
+using FontysMadeSteam.Logic;
 using FontysMadeSteam.Model;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,10 @@ namespace FontysMadeSteam.WindowsUI.ViewModels
     {
         private GameLogic gameL = new GameLogic();
         public Game Selectedgame;
-        public ObservableCollection<Game> Games;
+        public ObservableCollection<IGame> Games;
         public GameViewmodel()
         {
-            var games = gameL.GetAllGames();
-            Games = new ObservableCollection<Game>();
+            Games = new ObservableCollection<IGame>(gameL.GetAllGames());
         }
     }
 }
