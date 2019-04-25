@@ -2,8 +2,9 @@
 
 namespace FontysMadeSteam.Interface
 {
-    public class IGame
+    public interface IGame
     {
+        int Id { get; }
         string Name { get; }
         string DownloadUrl { get; }
         string Description { get; }

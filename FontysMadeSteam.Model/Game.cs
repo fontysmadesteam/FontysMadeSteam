@@ -6,7 +6,7 @@ using System.Text;
 namespace FontysMadeSteam.Model
 {
     public class Game : IGame
-    {
+    {   public int Id { get; set; }
         public string Name { get; set; }
         public DateTime DatePublished { get; set; }
         public string Description { get; set; }

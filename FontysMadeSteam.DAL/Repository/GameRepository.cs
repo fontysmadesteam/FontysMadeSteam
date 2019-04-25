@@ -16,5 +16,7 @@ namespace FontysMadeSteam.DAL.Repository
         {
             return Context.GameContext.listOfGames;
         }
+
+
     }
 }
