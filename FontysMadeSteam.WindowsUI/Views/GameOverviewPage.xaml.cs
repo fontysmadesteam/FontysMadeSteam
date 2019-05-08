@@ -25,17 +25,18 @@ namespace FontysMadeSteam.WindowsUI.Views
     /// </summary>
     public sealed partial class GameOverviewPage : Page
     {
-        public GameViewmodel ViewModel;
+        public AllGamesViewmodel ViewModel;
         public GameOverviewPage()
         {
-            ViewModel = new GameViewmodel();
+            ViewModel = new AllGamesViewmodel();
             this.InitializeComponent();
         }
 
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //var game = ((GridView)sender).SelectedItem;
-            this.Frame.Navigate(typeof(GameInfoPage));
+            var gridviewItem = (GridView)sender;
+            var game = (Game)gridviewItem.SelectedItem;
+            this.Frame.Navigate(typeof(GameInfoPage), game);
         }
     }
 }

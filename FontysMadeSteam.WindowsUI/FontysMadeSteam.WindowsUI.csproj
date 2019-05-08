@@ -119,7 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\GameViewmodel.cs" />
+    <Compile Include="ViewModels\AllGamesViewmodel.cs" />
+    <Compile Include="ViewModels\GameDetailViewmodel.cs" />
     <Compile Include="Views\GameInfoPage.xaml.cs">
       <DependentUpon>GameInfoPage.xaml</DependentUpon>
     </Compile>

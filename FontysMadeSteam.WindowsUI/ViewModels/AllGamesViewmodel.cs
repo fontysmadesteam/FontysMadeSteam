@@ -11,19 +11,15 @@ using System.Threading.Tasks;
 namespace FontysMadeSteam.WindowsUI.ViewModels
 {
     
-    public class GameViewmodel
+    public class AllGamesViewmodel
     {
         private GameLogic gameL = new GameLogic();
-        public Game Selectedgame;
         public ObservableCollection<IGame> Games;
-        public GameViewmodel()
+        public AllGamesViewmodel()
         {
             Games = new ObservableCollection<IGame>(gameL.GetAllGames());
         }
 
-        public void GoToGameInfo()
-        {
-            
-        }
+
     }
 }

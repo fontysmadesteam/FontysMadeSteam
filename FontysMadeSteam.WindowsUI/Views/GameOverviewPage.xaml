@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <GridView ItemsSource="{x:Bind ViewModel.Games}" SelectionMode = "None" IsItemClickEnabled = "True" ItemClick="GridView_ItemClick">
+        <GridView ItemsSource="{x:Bind ViewModel.Games}" SelectionMode = "Single" IsItemClickEnabled = "False" SelectionChanged="GridView_SelectionChanged">
             <GridView.ItemTemplate>
                 <DataTemplate x:Name="ImageOverlayDataTemplate" x:DataType="local1:Game">
                     <Grid Height="180" Width="320" >
