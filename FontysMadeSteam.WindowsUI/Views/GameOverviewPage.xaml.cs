@@ -38,5 +38,11 @@ namespace FontysMadeSteam.WindowsUI.Views
             var game = (Game)gridviewItem.SelectedItem;
             this.Frame.Navigate(typeof(GameInfoPage), game);
         }
+
+        private void Btn_search_Click(object sender, RoutedEventArgs e)
+        {
+            string input = Searchbox.Text;
+            ViewModel.SearchGames(input);
+        }
     }
 }

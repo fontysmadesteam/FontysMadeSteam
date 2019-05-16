@@ -10,23 +10,39 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <GridView ItemsSource="{x:Bind ViewModel.Games}" SelectionMode = "Single" IsItemClickEnabled = "False" SelectionChanged="GridView_SelectionChanged">
-            <GridView.ItemTemplate>
-                <DataTemplate x:Name="ImageOverlayDataTemplate" x:DataType="local1:Game">
-                    <Grid Height="180" Width="320" >
-                        <Image Source="Placeholder.png" Stretch="UniformToFill"/>
-                        <StackPanel Orientation="Vertical" Height="60" VerticalAlignment="Bottom" Background="{ThemeResource SystemBaseLowColor}" Padding="12">
-                            <TextBlock Text="{x:Bind Name}"/>
-                            <TextBlock Text="{x:Bind DatePublished}" Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-            <GridView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <ItemsWrapGrid MaximumRowsOrColumns="4" Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </GridView.ItemsPanel>
-        </GridView>
+        <SplitView IsPaneOpen="True"
+           DisplayMode="CompactInline"
+           OpenPaneLength="296">
+            <SplitView.Pane>
+                <TextBlock Text="Pane"
+                   FontSize="24"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+            </SplitView.Pane>
+
+            <Grid>
+                <GridView ItemsSource="{x:Bind ViewModel.Games}" SelectionMode = "Single" IsItemClickEnabled = "False" SelectionChanged="GridView_SelectionChanged" Margin="24,77,0,0">
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:Name="ImageOverlayDataTemplate" x:DataType="local1:Game">
+                            <Grid Height="180" Width="320" >
+                                <Image Source="Placeholder.png" Stretch="UniformToFill"/>
+                                <StackPanel Orientation="Vertical" Height="60" VerticalAlignment="Bottom" Background="{ThemeResource SystemBaseLowColor}" Padding="12">
+                                    <TextBlock Text="{x:Bind Name}"/>
+                                    <TextBlock Text="{x:Bind DatePublished}" Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid MaximumRowsOrColumns="4" Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                </GridView>
+                <TextBox x:Name="Searchbox" HorizontalAlignment="Left" Text="TextBox" VerticalAlignment="Top" Margin="24,10,0,0" Width="158"/>
+                <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="214,10,0,0" Width="114" Click="Btn_search_Click"/>
+            </Grid>
+        </SplitView>
+
     </Grid>
 </Page>

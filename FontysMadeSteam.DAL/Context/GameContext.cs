@@ -12,8 +12,17 @@ namespace FontysMadeSteam.DAL.Context
         #region dummy data 
         public static List<IGame> listOfGames = new List<IGame>()
         {
-            new Game(1,"game1", DateTime.Now, "description1", "downloadlink1", new List<string>(){ "tag1", "tag2" }),
-            new Game(2,"game2", DateTime.Now, "description2", "downloadlink2", new List<string>(){ "tag1", "tag2" })
+            new Game(1,"game1", DateTime.Now, "description1", "downloadlink1", "Voorjaar 2017"),
+            new Game(2,"game2", DateTime.Now, "description2", "downloadlink2", "Najaar 2017"),
+            new Game(3,"game3", DateTime.Now, "description3", "downloadlink3", "Najaar 2017")
+        };
+
+        public static List<string> listOfSemesters = new List<string>()
+        {
+            "Voorjaar 2017",
+            "Najaar 2017",
+            "Voorjaar 2018",
+            "Najaar 2018"
         };
         #endregion
     }

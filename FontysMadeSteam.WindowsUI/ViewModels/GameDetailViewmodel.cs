@@ -17,7 +17,7 @@ namespace FontysMadeSteam.WindowsUI.ViewModels
         public DateTime datePublished;
         public string description;
         public string downloadUrl;
-        public List<string> tags;
+        public string uitgave;
 
         public GameDetailViewmodel(Game gameInfo)
         {
@@ -26,7 +26,7 @@ namespace FontysMadeSteam.WindowsUI.ViewModels
             datePublished = gameInfo.DatePublished;
             description = gameInfo.Description;
             downloadUrl = gameInfo.DownloadUrl;
-            tags = gameInfo.Tags;
+            uitgave = gameInfo.Uitgave;
         }
     }
 }

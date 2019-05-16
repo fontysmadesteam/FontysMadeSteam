@@ -27,20 +27,19 @@ namespace FontysMadeSteam.Logic
             //implementation
             return null;
         }
-        public List<Game> GetGamesFilteredByTag(List<string> listOfTags)
+        //Methode is Misschien onnodig, als we geen tags kunnen gebruiken.
+        //Heb hem voor nu even omgezet naar filteren op semester/Uitgave
+        public List<Game> GetGamesFilteredBySemester(List<string> listOfSemesters)
         {
             List<Game> filteredListOfGames = new List<Game>();
-            foreach (string tag in listOfTags)
+            foreach (string semester in listOfSemesters)
             {
                 foreach (Game game in GameRepository.GetAllGames())
                 {
-                    foreach (string gameTag in game.Tags)
+                    if (game.Uitgave == semester & !filteredListOfGames.Contains(game))
                     {
-                        if (gameTag == tag & !filteredListOfGames.Contains(game))
-                        {
-                            filteredListOfGames.Add(game);
-                            break;
-                        }
+                        filteredListOfGames.Add(game);
+                        break;
                     }
                 }
             }

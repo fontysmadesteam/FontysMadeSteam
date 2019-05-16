@@ -15,10 +15,24 @@ namespace FontysMadeSteam.WindowsUI.ViewModels
     {
         private GameLogic gameL = new GameLogic();
         public ObservableCollection<IGame> Games;
+        private IEnumerable<IGame> gamelist;
         public AllGamesViewmodel()
         {
-            Games = new ObservableCollection<IGame>(gameL.GetAllGames());
+            gamelist = gameL.GetAllGames();
+            Games = new ObservableCollection<IGame>(gamelist);
         }
 
+        public void SearchGames(string input)
+        {
+            IGame searchResult = gamelist.FirstOrDefault(game => game.Name == input);
+            Games.Clear();
+            Games.Add(searchResult);
+        }
+        //public IGame SearchDevs(string input)
+        //{
+        //    var searchResult = gamelist.FirstOrDefault(game => game. == input);
+        //    return searchResult;
+        //}
+        
     }
 }
