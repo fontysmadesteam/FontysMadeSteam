@@ -17,16 +17,19 @@ namespace FontysMadeSteam.Logic
         public IEnumerable<IGame> GetAllGames()
         {
             return GameRepository.GetAllGames();
-            //foreach (var game in Games)
-            //{
-            //    yield return new Game(game.Name, game. game.Description, game.DownloadUrl);
-            //}
+        }
+
+        public List<string> GetAllSemesters()
+        {
+            return GameRepository.GetAllSemesters();
+            
         }
         public List<Game> Search(string parameter, SearchType type)
         {
             //implementation
             return null;
         }
+
         //Methode is Misschien onnodig, als we geen tags kunnen gebruiken.
         //Heb hem voor nu even omgezet naar filteren op semester/Uitgave
         public List<Game> GetGamesFilteredBySemester(List<string> listOfSemesters)

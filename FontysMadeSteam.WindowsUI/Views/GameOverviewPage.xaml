@@ -14,10 +14,13 @@
            DisplayMode="CompactInline"
            OpenPaneLength="296">
             <SplitView.Pane>
-                <TextBlock Text="Pane"
-                   FontSize="24"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
+                <ListView x:Name="Semesters" ItemsSource="{x:Bind ViewModel.Semesters}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <CheckBox Content="{x:Bind}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </SplitView.Pane>
 
             <Grid>

@@ -17,6 +17,9 @@ namespace FontysMadeSteam.DAL.Repository
             return Context.GameContext.listOfGames;
         }
 
-
+        public List<string> GetAllSemesters()
+        {
+            return Context.GameContext.listOfSemesters;
+        }
     }
 }
