@@ -9,6 +9,7 @@ namespace FontysMadeSteam.Model
         public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
+        List<string> Tags { get; set; }
         public WpPost()
         {
 
