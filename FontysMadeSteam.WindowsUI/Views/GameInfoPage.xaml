@@ -1,5 +1,6 @@
 ﻿<Page
     x:Class="FontysMadeSteam.WindowsUI.Views.GameInfoPage"
+    xmlns:viewmodel="using:FontysMadeSteam.WindowsUI.ViewModels.GameDetailViewmodel" 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:FontysMadeSteam.WindowsUI"
@@ -8,8 +9,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button x:Name="BackToOverviewbtn" Content="Back to Overview" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,48,0,0" Height="52" Width="155" FontSize="16" Click="BackToOverviewbtn_Click"/>
 
+    <Grid>
+        <Button x:Name="BackToOverviewbtn" Content="Back to Overview" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,48,0,0" Height="52" Width="147" FontSize="16" Click="BackToOverviewbtn_Click"/>
+        <TextBlock HorizontalAlignment="Left" Text="{x:Bind Viewmodel.Name}"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="585,74,0,0" Height="35" Width="293" FontSize="24"/>
+        <TextBlock  HorizontalAlignment="Left" Text="{x:Bind Viewmodel.description}" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Margin="585,350,0,0" Height="35" Width="293" FontSize="14"/>
+        <TextBlock  HorizontalAlignment="Left" Text="{x:Bind Viewmodel.datePublished}" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Margin="585,400,0,0" Height="35" Width="293" FontSize="14"/>
     </Grid>
 </Page>

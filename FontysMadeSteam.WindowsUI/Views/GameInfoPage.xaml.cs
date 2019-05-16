@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FontysMadeSteam.Model;
+using FontysMadeSteam.WindowsUI.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,14 +24,15 @@ namespace FontysMadeSteam.WindowsUI.Views
     /// </summary>
     public sealed partial class GameInfoPage : Page
     {
+        public GameDetailViewmodel Viewmodel { get; set; } 
         public GameInfoPage()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();           
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            
+            Viewmodel = new GameDetailViewmodel((Game)e.Parameter);
         }
         private void BackToOverviewbtn_Click(object sender, RoutedEventArgs e)
         {
