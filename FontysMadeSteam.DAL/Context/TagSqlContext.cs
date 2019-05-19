@@ -32,5 +32,22 @@ namespace FontysMadeSteam.DAL.Context
             _connection.Close();
             return ListOfTags;
         }
+        public List<string> GetCategorieNames()
+        {
+            List<string> ListOfCategories = new List<string>();
+            _connection.Open();
+            MySqlCommand cmd = new MySqlCommand("", _connection);
+            using (MySqlDataReader dr = cmd.ExecuteReader())
+            {
+                string tag;
+                while (dr.Read())
+                {
+                    tag = dr.GetString(0);
+                    ListOfCategories.Add(tag);
+                }
+            }
+            _connection.Close();
+            return ListOfCategories;
+        }
     }
 }
