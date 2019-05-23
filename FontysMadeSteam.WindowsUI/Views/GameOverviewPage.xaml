@@ -10,8 +10,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <SplitView IsPaneOpen="True"
-           DisplayMode="CompactInline"
+        <SplitView x:Name="FilterPanel"  IsPaneOpen="False"
+           DisplayMode="Inline"
            OpenPaneLength="296">
             <SplitView.Pane>
                 <StackPanel>
@@ -28,8 +28,12 @@
 
             </SplitView.Pane>
 
-            <Grid>
-                <GridView ItemsSource="{x:Bind ViewModel.Games}" SelectionMode = "Single" IsItemClickEnabled = "False" SelectionChanged="GridView_SelectionChanged" Margin="24,77,0,0">
+            <Grid HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="43*"/>
+                    <RowDefinition Height="957*"/>
+                </Grid.RowDefinitions>
+                <GridView ItemsSource="{x:Bind ViewModel.Games}" SelectionMode = "Single" IsItemClickEnabled = "False" SelectionChanged="GridView_SelectionChanged" Margin="24,34.25,0,0" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch">
                     <GridView.ItemTemplate>
                         <DataTemplate x:Name="ImageOverlayDataTemplate" x:DataType="local1:Game">
                             <Grid Height="180" Width="320" >
@@ -47,8 +51,9 @@
                         </ItemsPanelTemplate>
                     </GridView.ItemsPanel>
                 </GridView>
-                <TextBox x:Name="Searchbox" HorizontalAlignment="Left" Text="TextBox" VerticalAlignment="Top" Margin="24,10,0,0" Width="158"/>
-                <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="214,10,0,0" Width="114" Click="Btn_search_Click"/>
+                <TextBox x:Name="Searchbox" HorizontalAlignment="Left" Text="TextBox" VerticalAlignment="Top" Margin="174,11,0,0" Width="158" Grid.RowSpan="2"/>
+                <Button x:Name="btn_search" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="347,10,0,0" Width="114" Click="Btn_search_Click" Grid.RowSpan="2"/>
+                <Button x:Name="btn_openPanel" Content="Filter options" HorizontalAlignment="Left" Margin="24,11,0,0" VerticalAlignment="Top" Height="32" Width="108" Click="Btn_openPanel_Click"/>
             </Grid>
         </SplitView>
 

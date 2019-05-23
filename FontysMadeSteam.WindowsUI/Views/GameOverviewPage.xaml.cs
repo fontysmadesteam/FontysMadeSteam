@@ -62,7 +62,23 @@ namespace FontysMadeSteam.WindowsUI.Views
 
         private void OptionsAllCheckBox_Checked(object sender, RoutedEventArgs e)
         {
+            foreach (var checkbox in Semesters)
+            {
 
+            }
+        }
+
+        private void Btn_openPanel_Click(object sender, RoutedEventArgs e)
+        {
+            if (FilterPanel.IsPaneOpen == true)
+            {
+                FilterPanel.IsPaneOpen = false;
+            }
+            else
+            {
+                FilterPanel.IsPaneOpen = true;
+            }
+            
         }
     }
 }

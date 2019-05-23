@@ -26,7 +26,7 @@ namespace FontysMadeSteam.WindowsUI.ViewModels
             datePublished = gameInfo.DatePublished;
             description = gameInfo.Description;
             downloadUrl = gameInfo.DownloadUrl;
-            uitgave = gameInfo.Uitgave.Seizoen.ToString()+gameInfo.Uitgave.Jaar;
+            uitgave = gameInfo.Uitgave;
         }
     }
 }

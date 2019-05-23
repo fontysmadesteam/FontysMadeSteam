@@ -12,12 +12,12 @@ namespace FontysMadeSteam.Model
         public DateTime DatePublished { get; set; }
         public string Description { get; set; }
         public string DownloadUrl { get; set; }
-        public Uitgave Uitgave { get; set; }
+        public string Uitgave { get; set; }
         public Game()
         {
 
         }
-        public Game(int id, string name, DateTime datePublished, string description, string downloadUrl, Uitgave uitgave)
+        public Game(int id, string name, DateTime datePublished, string description, string downloadUrl, string uitgave)
         {
             Id = id;
             Name = name;
