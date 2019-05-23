@@ -12,7 +12,7 @@ namespace FontysMadeSteam.DAL.Context
         {
             _connection = new MySqlConnection
             {
-                ConnectionString = "studmysql01.fhict.local; Uid = dbi397713; Database = dbi397713; Pwd = S21Database;"
+                ConnectionString = string.Format("SERVER=studmysql01.fhict.local; UID = dbi397713; DATABASE = dbi397713; PASSWORD = s21Database;")
             };
         }
         public IEnumerable<string> GetTagNames()
@@ -47,7 +47,7 @@ namespace FontysMadeSteam.DAL.Context
             return ListOfCategories;
         }
 
-        internal IEnumerable<string> GetCategory(int id)
+        public IEnumerable<string> GetCategory(int id)
         {
             List<string> ListOfTags = new List<string>();
             _connection.Open();
@@ -61,6 +61,10 @@ namespace FontysMadeSteam.DAL.Context
                 }
             }
             _connection.Close();
+            if(ListOfTags.Count == 0)
+            {
+                return null;
+            }
             return ListOfTags;
         }
 
@@ -78,7 +82,12 @@ namespace FontysMadeSteam.DAL.Context
                     ListOfTags.Add(dr.GetString(0));
                 }
             }
+            
             _connection.Close();
+            if(ListOfTags.Count == 0)
+            {
+                return null;
+            }
             return ListOfTags;
 
         }
