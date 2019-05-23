@@ -28,5 +28,21 @@ namespace FontysMadeSteam.UnitTest
                 Assert.AreEqual(listGamesExpected[i], listGamesResult[i]);
             }
         }
+
+        public void GetAllFilteredGames()
+        {
+            List<Game> listGamesExpected = new List<Game>();
+            List<Game> listGamesResult = new List<Game>();
+            GameLogic gameLogic = new GameLogic();
+
+            listGamesExpected = GameContext.listOfGames.OfType<Game>().ToList();
+            listGamesResult = gameLogic.GetAllGames().OfType<Game>().ToList();
+
+            //Assert.AreEqual(listGamesExpected, listGamesResult);
+            for (int i = 0; i < listGamesExpected.Count; i++)
+            {
+                Assert.AreEqual(listGamesExpected[i], listGamesResult[i]);
+            }
+        }
     }
 }
