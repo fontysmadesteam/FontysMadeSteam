@@ -43,6 +43,14 @@ namespace FontysMadeSteam.DAL.Context
                 }
             }
             _connection.Close();
+            foreach (WpPost post in ListOfPosts)
+            {
+                IEnumerable<string> tagList = new TagSqlContext().GetTags(post.Id);
+                post.Tags.AddRange(tagList);
+                IEnumerable<string> CategoryList = new TagSqlContext().GetCategory(post.Id);
+                post.Categories.AddRange(CategoryList);
+            }
+
             return ListOfPosts;
         }
 
@@ -56,7 +64,7 @@ namespace FontysMadeSteam.DAL.Context
             {
                 while (dr.Read())
                 {
-                    
+
 
                     if (!dr.IsDBNull(0))
                     {
@@ -70,10 +78,15 @@ namespace FontysMadeSteam.DAL.Context
                     {
                         tempPost.Content = dr.GetString(2);
                     }
-                    
+
                 }
             }
+            IEnumerable<string> taglist = new TagSqlContext().GetTags(tempPost.Id);
+            IEnumerable<string> CategoryList = new TagSqlContext().GetCategory(tempPost.Id);
+            tempPost.Tags.AddRange(taglist);
+            tempPost.Categories.AddRange(CategoryList);
             _connection.Close();
+
             return tempPost;
         }
 
