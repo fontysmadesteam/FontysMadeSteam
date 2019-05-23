@@ -15,35 +15,32 @@ namespace FontysMadeSteam.DAL.Context
                 ConnectionString = "studmysql01.fhict.local; Uid = dbi397713; Database = dbi397713; Pwd = S21Database;"
             };
         }
-        public List<string> GetTagNames()
+        public IEnumerable<string> GetTagNames()
         {
             List<string> ListOfTags = new List<string>();
             _connection.Open();
-            MySqlCommand cmd = new MySqlCommand("", _connection);
+            MySqlCommand cmd = new MySqlCommand("Select wp_terms.name From wp_terms inner join wp_term_taxonomy on wp_terms.term_id = wp_term_taxonomy.term_id where wp_term_taxonomy.taxonomy = 'post_tag'", _connection);
             using (MySqlDataReader dr = cmd.ExecuteReader())
             {
-                string tag;
                 while (dr.Read())
                 {
-                    tag = dr.GetString(0);
-                    ListOfTags.Add(tag);
+                    ListOfTags.Add(dr.GetString(0));
                 }
             }
             _connection.Close();
             return ListOfTags;
         }
-        public List<string> GetCategorieNames()
+        public IEnumerable<string> GetCategorieNames()
         {
             List<string> ListOfCategories = new List<string>();
             _connection.Open();
-            MySqlCommand cmd = new MySqlCommand("", _connection);
+            //Where wp_term_taxonomy.taxonomy = "category"
+            MySqlCommand cmd = new MySqlCommand("Select wp_terms.name From wp_terms inner join wp_term_taxonomy on wp_terms.term_id = wp_term_taxonomy.term_id where wp_term_taxonomy.taxonomy = 'category'", _connection);
             using (MySqlDataReader dr = cmd.ExecuteReader())
             {
-                string tag;
                 while (dr.Read())
                 {
-                    tag = dr.GetString(0);
-                    ListOfCategories.Add(tag);
+                    ListOfCategories.Add(dr.GetString(0));
                 }
             }
             _connection.Close();
