@@ -14,13 +14,18 @@
            DisplayMode="CompactInline"
            OpenPaneLength="296">
             <SplitView.Pane>
-                <ListView x:Name="Semesters" ItemsSource="{x:Bind ViewModel.Semesters}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="x:String">
-                            <CheckBox Content="{x:Bind}"/>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <StackPanel>
+                    <CheckBox x:Name="OptionsAllCheckBox" Content="Select all" IsThreeState="True" 
+             Checked="OptionsAllCheckBox_Checked" Unchecked="OptionsAllCheckBox_Unchecked" Indeterminate="OptionsAllCheckBox_Indeterminate"/>
+                    <ListView x:Name="Semesters" ItemsSource="{x:Bind ViewModel.Semesters}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="x:String">
+                                <CheckBox Content="{x:Bind}" Click="CheckBox_Click"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+
             </SplitView.Pane>
 
             <Grid>

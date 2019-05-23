@@ -33,7 +33,6 @@ namespace FontysMadeSteam.WindowsUI.ViewModels
             {
                 Games.Add(result);
             }
-
         }
 
         //public IGame SearchDevs(string input)

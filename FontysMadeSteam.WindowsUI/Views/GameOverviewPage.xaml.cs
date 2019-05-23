@@ -44,5 +44,25 @@ namespace FontysMadeSteam.WindowsUI.Views
             string input = Searchbox.Text;
             ViewModel.SearchGames(input);
         }
+
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OptionsAllCheckBox_Indeterminate(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OptionsAllCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OptionsAllCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
