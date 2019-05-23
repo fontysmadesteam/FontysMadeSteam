@@ -51,7 +51,7 @@ namespace FontysMadeSteam.DAL.Context
         {
             List<string> ListOfTags = new List<string>();
             _connection.Open();
-            MySqlCommand cmd = new MySqlCommand("Select wp_terms.name From wp_terms inner join wp_term_taxonomy  on wp_terms.term_id = wp_term_taxonomy.term_id inner join wp_term_relationships on wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id where wp_term_taxonomy.taxonomy = 'category' AND wp_term_relationships.object_id ? id", _connection);
+            MySqlCommand cmd = new MySqlCommand("Select wp_terms.name From wp_terms inner join wp_term_taxonomy  on wp_terms.term_id = wp_term_taxonomy.term_id inner join wp_term_relationships on wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id where wp_term_taxonomy.taxonomy = 'category' AND wp_term_relationships.object_id = ?id", _connection);
             cmd.Parameters.Add(new MySqlParameter("id", id));
             using (MySqlDataReader dr = cmd.ExecuteReader())
             {
@@ -69,7 +69,7 @@ namespace FontysMadeSteam.DAL.Context
 
             List<string> ListOfTags = new List<string>();
             _connection.Open();
-            MySqlCommand cmd = new MySqlCommand("Select wp_terms.name From wp_terms inner join wp_term_taxonomy  on wp_terms.term_id = wp_term_taxonomy.term_id inner join wp_term_relationships on wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id where wp_term_taxonomy.taxonomy = 'post_tag' AND wp_term_relationships.object_id ? id", _connection);
+            MySqlCommand cmd = new MySqlCommand("Select wp_terms.name From wp_terms inner join wp_term_taxonomy  on wp_terms.term_id = wp_term_taxonomy.term_id inner join wp_term_relationships on wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id where wp_term_taxonomy.taxonomy = 'post_tag' AND wp_term_relationships.object_id = ?id", _connection);
             cmd.Parameters.Add(new MySqlParameter("id", id));
             using (MySqlDataReader dr = cmd.ExecuteReader())
             {

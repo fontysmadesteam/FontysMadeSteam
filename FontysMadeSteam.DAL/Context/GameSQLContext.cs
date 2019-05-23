@@ -64,8 +64,6 @@ namespace FontysMadeSteam.DAL.Context
             {
                 while (dr.Read())
                 {
-
-
                     if (!dr.IsDBNull(0))
                     {
                         tempPost.Id = dr.GetInt32(0);
@@ -81,12 +79,11 @@ namespace FontysMadeSteam.DAL.Context
 
                 }
             }
+            _connection.Close();
             IEnumerable<string> taglist = new TagSqlContext().GetTags(tempPost.Id);
             IEnumerable<string> CategoryList = new TagSqlContext().GetCategory(tempPost.Id);
             tempPost.Tags.AddRange(taglist);
             tempPost.Categories.AddRange(CategoryList);
-            _connection.Close();
-
             return tempPost;
         }
 
@@ -97,10 +94,51 @@ namespace FontysMadeSteam.DAL.Context
             cmd.Parameters.Add(new MySqlParameter("id", post.Id));
             cmd.Parameters.Add(new MySqlParameter("title", post.Title));
             cmd.Parameters.Add(new MySqlParameter("content", post.Content));
+
             cmd.ExecuteNonQuery();
             _connection.Close();
         }
 
-
+        public IEnumerable<WpPost> GetPostByCategoryOrTag(string category)
+        {
+            List<WpPost> tempList = new List<WpPost>();
+           
+            _connection.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT wp_posts.ID , wp_posts.post_title , wp_posts.post_content From wp_posts Inner Join wp_term_relationships on wp_posts.ID = wp_term_relationships.object_id inner JOIN wp_term_taxonomy on wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id INNER JOIN wp_terms on wp_terms.term_id = wp_term_taxonomy.term_id where wp_terms.name like ?search", _connection);
+            cmd.Parameters.Add(new MySqlParameter("search", "%" + category + "%"));
+            using(MySqlDataReader dr = cmd.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    WpPost tempPost = new WpPost();
+                    while (dr.Read())
+                    {
+                        if (!dr.IsDBNull(0))
+                        {
+                            tempPost.Id = dr.GetInt32(0);
+                        }
+                        if (!dr.IsDBNull(1))
+                        {
+                            tempPost.Title = dr.GetString(1);
+                        }
+                        if (!dr.IsDBNull(2))
+                        {
+                            tempPost.Content = dr.GetString(2);
+                        }
+                    }
+                    tempList.Add(tempPost);
+                }
+            }
+            _connection.Close();
+            foreach(WpPost post in tempList)
+            {
+                IEnumerable<string> taglist = new TagSqlContext().GetTags(post.Id);
+                post.Tags.AddRange(taglist);
+                IEnumerable<string> categoryList = new TagSqlContext().GetCategory(post.Id);
+                post.Tags.AddRange(categoryList);
+            }
+            return tempList;
+        }
+        
     }
 }
