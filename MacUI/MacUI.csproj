@@ -81,9 +81,24 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameItem.cs" />
+    <Compile Include="GameItemController.cs" />
+    <Compile Include="GameItem.designer.cs">
+      <DependentUpon>GameItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameItemController.designer.cs">
+      <DependentUpon>GameItemController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="GameItem.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FontysMadeSteam.Model\FontysMadeSteam.Model.csproj">
+      <Project>{A49E34C8-2FE1-4F49-A004-D91DF56D3FB1}</Project>
+      <Name>FontysMadeSteam.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>
