@@ -37,8 +37,12 @@
                     <GridView.ItemTemplate>
                         <DataTemplate x:Name="ImageOverlayDataTemplate" x:DataType="local1:Game">
                             <Grid Height="180" Width="320" >
-                                <Image Source="Placeholder.png" Stretch="UniformToFill"/>
-                                <StackPanel Orientation="Vertical" Height="60" VerticalAlignment="Bottom" Background="{ThemeResource SystemBaseLowColor}" Padding="12">
+                                <Image Stretch="UniformToFill">
+                                    <Image.Source>
+                                        <BitmapImage UriSource="{Binding ImageUrl}"/>
+                                    </Image.Source>
+                                </Image>
+                                <StackPanel Orientation="Vertical" Height="60" VerticalAlignment="Bottom" Background="LightGray" Padding="12">
                                     <TextBlock Text="{x:Bind Name}"/>
                                     <TextBlock Text="{x:Bind DatePublished}" Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
                                 </StackPanel>

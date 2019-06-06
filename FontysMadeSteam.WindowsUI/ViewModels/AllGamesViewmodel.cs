@@ -7,6 +7,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media.Imaging;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace FontysMadeSteam.WindowsUI.ViewModels
 {
@@ -21,7 +23,6 @@ namespace FontysMadeSteam.WindowsUI.ViewModels
         {
             gamelist = gameL.GetAllGames();
             Games = new ObservableCollection<IGame>(gamelist);
-
             Semesters = new ObservableCollection<string>(gameL.GetAllSemesters());
         }
 

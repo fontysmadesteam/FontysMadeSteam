@@ -13,11 +13,12 @@ namespace FontysMadeSteam.Model
         public string Description { get; set; }
         public string DownloadUrl { get; set; }
         public string Uitgave { get; set; }
+        public Uri ImageUrl { get; set; }
         public Game()
         {
 
         }
-        public Game(int id, string name, DateTime datePublished, string description, string downloadUrl, string uitgave)
+        public Game(int id, string name, DateTime datePublished, string description, string downloadUrl, string uitgave, string img)
         {
             Id = id;
             Name = name;
@@ -25,6 +26,7 @@ namespace FontysMadeSteam.Model
             Description = description;
             DownloadUrl = downloadUrl;
             Uitgave = uitgave;
+            ImageUrl = new Uri(img);
         }
     }
 }

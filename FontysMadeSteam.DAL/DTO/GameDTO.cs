@@ -12,6 +12,7 @@ namespace FontysMadeSteam.DAL.DTO
         public string DownloadUrl => throw new NotImplementedException();
 
         public string Description => throw new NotImplementedException();
+        public Uri ImageUrl => throw new NotImplementedException();
         public int Id => throw new NotImplementedException();
     }
 }

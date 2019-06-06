@@ -8,5 +8,6 @@ namespace FontysMadeSteam.Interface
         string Name { get; }
         string DownloadUrl { get; }
         string Description { get; }
+        Uri ImageUrl { get; }
     }
 }
