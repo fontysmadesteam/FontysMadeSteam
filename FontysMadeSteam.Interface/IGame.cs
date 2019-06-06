@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FontysMadeSteam.Interface
 {
@@ -6,7 +7,8 @@ namespace FontysMadeSteam.Interface
     {
         int Id { get; }
         string Name { get; }
-        string DownloadUrl { get; }
+        List<string> DownloadUrls { get; }
+        List<string> MediaUrls { get; }
         string Description { get; }
     }
 }
