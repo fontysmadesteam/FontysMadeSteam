@@ -47,7 +47,7 @@ namespace FontysMadeSteam.DAL.Context
             return ListOfCategories;
         }
 
-        public IEnumerable<string> GetCategory(int id)
+        public List<string> GetCategory(int id)
         {
             List<string> ListOfTags = new List<string>();
             _connection.Open();
@@ -68,7 +68,7 @@ namespace FontysMadeSteam.DAL.Context
             return ListOfTags;
         }
 
-        public IEnumerable<string> GetTags(int id)
+        public List<string> GetTags(int id)
         {
 
             List<string> ListOfTags = new List<string>();

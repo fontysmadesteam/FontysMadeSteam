@@ -9,8 +9,10 @@ namespace FontysMadeSteam.DAL.Context
     public class GameSQLContext
     {
         private MySqlConnection _connection;
+        private TagSqlContext tagSqlContext;
         public GameSQLContext()
         {
+            tagSqlContext = new TagSqlContext();
             _connection = new MySqlConnection
             {
                 ConnectionString = string.Format("SERVER=studmysql01.fhict.local; UID = dbi397713; DATABASE = dbi397713; PASSWORD = s21Database;")
@@ -43,13 +45,11 @@ namespace FontysMadeSteam.DAL.Context
                 }
             }
             _connection.Close();
-          /*  foreach (WpPost post in ListOfPosts)
+            foreach (WpPost post in ListOfPosts)
             {
-                IEnumerable<string> tagList = new TagSqlContext().GetTags(post.Id);
-                post.Tags.AddRange(tagList);
-                IEnumerable<string> CategoryList = new TagSqlContext().GetCategory(post.Id);
-                post.Categories.AddRange(CategoryList);
-            } */
+                post.Tags = tagSqlContext.GetTags(post.Id);
+                post.Categories = tagSqlContext.GetCategory(post.Id);
+            }
 
 
             return ListOfPosts;
@@ -81,23 +81,11 @@ namespace FontysMadeSteam.DAL.Context
                 }
             }
             _connection.Close();
-            /* IEnumerable<string> taglist = new TagSqlContext().GetTags(tempPost.Id);
-            IEnumerable<string> CategoryList = new TagSqlContext().GetCategory(tempPost.Id);
-            if(taglist != null)
-            {
-                foreach (string tag in taglist)
-                {
-                    tempPost.Tags.Add(tag);
-                }
-            }
-            if(CategoryList != null)
-            {
-                foreach (string category in CategoryList)
-                {
-                    tempPost.Categories.Add(category);
-                }
-            }
-            */
+
+            tempPost.Tags = tagSqlContext.GetTags(id);
+            tempPost.Categories = tagSqlContext.GetCategory(id);
+            
+          
           
             return tempPost;
         }
@@ -145,13 +133,13 @@ namespace FontysMadeSteam.DAL.Context
                 }
             }
             _connection.Close();
-          /*  foreach(WpPost post in tempList)
+           foreach(WpPost post in tempList)
             {
                 IEnumerable<string> taglist = new TagSqlContext().GetTags(post.Id);
                 post.Tags.AddRange(taglist);
                 IEnumerable<string> categoryList = new TagSqlContext().GetCategory(post.Id);
                 post.Tags.AddRange(categoryList);
-            } */
+            } 
             return tempList;
         }
         

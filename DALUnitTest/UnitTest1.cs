@@ -38,6 +38,12 @@ namespace DALUnitTest
             Assert.IsNotNull(Tags);
             Assert.AreEqual(Tags.Count, 5);
         }
-        
+        [TestMethod]
+        public void GetAllPosts()
+        {
+            IEnumerable<WpPost> wpPosts = new List<WpPost>();
+            wpPosts = Gamecontext.GetWpPosts();
+            Assert.AreEqual(wpPosts.Count(), 67);
+        }
     }
 }
