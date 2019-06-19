@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FontysMadeSteam.Interface\FontysMadeSteam.Interface.csproj" />
     <ProjectReference Include="..\FontysMadeSteam.Model\FontysMadeSteam.Model.csproj" />
   </ItemGroup>

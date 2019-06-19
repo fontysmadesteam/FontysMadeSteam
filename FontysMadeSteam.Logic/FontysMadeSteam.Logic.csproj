@@ -6,8 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+
     <ProjectReference Include="..\FontysMadeSteam.DAL\FontysMadeSteam.DAL.csproj" />
     <ProjectReference Include="..\FontysMadeSteam.Model\FontysMadeSteam.Model.csproj" />
+
   </ItemGroup>
 
 </Project>
